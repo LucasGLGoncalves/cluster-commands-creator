@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gerar K3D Cluster</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-5xl mx-auto bg-white p-6 rounded-xl shadow">
+    <h2 class="text-3xl font-bold mb-6">Gerar Cluster K3D</h2>
+    <form id="k3dForm" class="space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input name="nome" placeholder="Nome do cluster" class="border p-2 rounded w-full" required>
+        <input name="porta" placeholder="Bind de porta (ex: 8080:80)" class="border p-2 rounded w-full" required>
+        <input name="servers" type="number" placeholder="Número de servidores" class="border p-2 rounded w-full" required>
+        <input name="agents" type="number" placeholder="Número de agentes" class="border p-2 rounded w-full" required>
+      </div>
+
+      <h3 class="text-xl font-semibold">Imagens de containers</h3>
+      <div id="imagensContainer" class="space-y-6"></div>
+      <button type="button" id="addImagem" class="bg-green-600 text-white px-4 py-2 rounded">+ Adicionar imagem</button>
+
+      <div class="mt-6">
+        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded">Gerar Comandos</button>
+      </div>
+    </form>
+
+    <div id="resultado" class="mt-10 hidden">
+      <h3 class="text-2xl font-bold mb-2">Comandos Gerados</h3>
+      <pre id="outputComandos" class="bg-gray-100 p-4 rounded whitespace-pre-wrap"></pre>
+    </div>
+
+    <a href="index.html" class="text-blue-500 mt-6 inline-block">⬅ Voltar</a>
+  </div>
+
+  <script src="k3d.js"></script>
+</body>
+</html>

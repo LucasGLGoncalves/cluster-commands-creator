@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerar Kubeadm Cluster</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-2xl mx-auto bg-white p-6 rounded-xl shadow">
+    <h2 class="text-2xl font-bold mb-4">Gerar Comando Kubeadm</h2>
+    <form id="kubeadmForm" class="space-y-4">
+      <input type="text" name="podNetwork" placeholder="Pod Network CIDR (ex: 192.168.0.0/16)" class="w-full border p-2 rounded">
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Gerar Comando</button>
+    </form>
+    <pre id="outputKubeadm" class="mt-4 bg-gray-100 p-4 rounded"></pre>
+    <a href="index.html" class="text-blue-500 mt-4 inline-block">⬅ Voltar</a>
+  </div>
+
+  <script>
+    document.getElementById('kubeadmForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const podNetwork = e.target.podNetwork.value;
+      const comando = `kubeadm init --pod-network-cidr=${podNetwork}`;
+      document.getElementById('outputKubeadm').textContent = comando;
+    });
+  </script>
+</body>
+</html>

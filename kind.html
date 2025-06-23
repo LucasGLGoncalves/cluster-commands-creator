@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerar KIND Cluster</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+  <div class="max-w-2xl mx-auto bg-white p-6 rounded-xl shadow">
+    <h2 class="text-2xl font-bold mb-4">Gerar Comando KIND</h2>
+    <form id="kindForm" class="space-y-4">
+      <input type="text" name="nome" placeholder="Nome do cluster" class="w-full border p-2 rounded">
+      <input type="number" name="servers" placeholder="Qtd de control-plane nodes" class="w-full border p-2 rounded">
+      <input type="number" name="agents" placeholder="Qtd de worker nodes" class="w-full border p-2 rounded">
+      <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Gerar Comando + YAML</button>
+    </form>
+    <pre id="outputKind" class="mt-4 bg-gray-100 p-4 rounded whitespace-pre-wrap"></pre>
+    <a href="index.html" class="text-blue-500 mt-4 inline-block">⬅ Voltar</a>
+  </div>
+
+  <script>
+    document.getElementById('kindForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nome = e.target.nome.value;
+      const servers = parseInt(e.target.servers.value);
+      const agents = parseInt(e.target.agents.value);
+
+      let yaml = `kind: Cluster\napiVersion: kind.x-k8s.io/v1alpha4\nnodes:\n`;
+      yaml += '  - role: control-plane\n'.repeat(servers);
+      yaml += '  - role: worker\n'.repeat(agents);
+
+      const comando = `kind create cluster --name ${nome} --config kind-config.yaml`;
+      document.getElementById('outputKind').textContent = `${comando}\n\nArquivo kind-config.yaml:\n${yaml}`;
+    });
+  </script>
+</body>
+</html>
