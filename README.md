@@ -30,10 +30,18 @@ A interface permite preencher formulários e gerar automaticamente:
 ### 🚀 Como usar
 
 1. Clone o repositório:
-2. Abra o arquivo `index.html` no seu navegador.
-3. Clique no card do K3D (único com formulário funcional).
+   ```bash
+   git clone https://github.com/LucasGLGoncalves/cluster-commands-creator.git
+   ```
+
+2. Acesse a [versão online via GitHub Pages](https://lucasglggoncalves.github.io/cluster-commands-creator/) ou abra localmente o arquivo `index.html`.
+
+3. Clique no card do **K3D** (único com formulário funcional).
+
 4. Preencha as informações do cluster e dos containers.
+
 5. Clique em "Gerar comandos".
+
 6. Copie e cole os comandos e YAMLs no seu terminal para estudar Kubernetes localmente.
 
 ---
@@ -46,7 +54,7 @@ Ao iniciar os estudos com Kubernetes, é comum esquecer os comandos certos para 
 
 ### 👨‍💻 Autor
 
-Este projeto foi criado por **Lucas Gonçalves** como parte de seus estudos em DevOps e Kubernetes. Ele está sendo mantido com foco em **facilitar o aprendizado de iniciantes**.
+Este projeto foi criado por **Lucas** como parte de seus estudos em DevOps e Kubernetes. Ele está sendo mantido com foco em **facilitar o aprendizado de iniciantes**.
 
 Se você também está aprendendo, sinta-se à vontade para usar, clonar, contribuir ou adaptar.
 
@@ -60,3 +68,18 @@ Este projeto **não é destinado a uso em produção**. Ele é voltado exclusiva
 
 ### 🌐 GitHub Pages
 
+Este repositório está publicado automaticamente via GitHub Pages.
+
+🔗 Acesse: [https://lucasglggoncalves.github.io/cluster-commands-creator/](https://lucasglggoncalves.github.io/cluster-commands-creator/)
+
+Para configurar no seu próprio repositório:
+
+1. Vá até **Settings > Pages**
+2. Em **Source**, selecione a branch `main` e a pasta `/ (root)`
+3. O site estará disponível em `https://<seu-usuario>.github.io/<nome-do-repositorio>/`
+
+---
+
+### ⚙️ Automação (CI/CD)
+
+Este projeto também possui suporte a publicação automática via GitHub Actions.
