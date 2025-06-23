@@ -34,7 +34,7 @@ A interface permite preencher formulários e gerar automaticamente:
    git clone https://github.com/LucasGLGoncalves/cluster-commands-creator.git
    ```
 
-2. Acesse a [versão online via GitHub Pages](https://lucasglggoncalves.github.io/cluster-commands-creator/) ou abra localmente o arquivo `index.html`.
+2. Acesse a [versão online via GitHub Pages](https://lucasglgoncalves.github.io/cluster-commands-creator/) ou abra localmente o arquivo `index.html`.
 
 3. Clique no card do **K3D** (único com formulário funcional).
 
@@ -70,7 +70,7 @@ Este projeto **não é destinado a uso em produção**. Ele é voltado exclusiva
 
 Este repositório está publicado automaticamente via GitHub Pages.
 
-🔗 Acesse: [https://lucasglggoncalves.github.io/cluster-commands-creator/](https://lucasglggoncalves.github.io/cluster-commands-creator/)
+🔗 Acesse: [https://lucasglggoncalves.github.io/cluster-commands-creator/](https://lucasglgoncalves.github.io/cluster-commands-creator/)
 
 Para configurar no seu próprio repositório:
 
